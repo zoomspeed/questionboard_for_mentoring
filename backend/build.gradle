@@ -1,8 +1,35 @@
 plugins {
 	id 'org.springframework.boot' version '2.5.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id "com.github.node-gradle.node" version "3.1.0"
 	id 'java'
 }
+node {
+	version = '16.13.0'
+	npmVersion = '8.1.4'
+	download = true
+	workDir = file("${project.buildDir}/nodejs")
+	npmWorkDir = file("${project.buildDir}/npm")
+}
+
+//이미 빌드된 파일 삭제
+task deleteVueArtifact(type: Delete) {
+	delete "src/main/resources/static"
+}
+
+//npm install
+task frontNpmInstall(type: NpmTask) {
+	workingDir = file("${project.projectDir}/src/frontend")
+	args = ['install']
+}
+
+//npm run build
+task npmBuild(type: NpmTask, dependsOn: ['deleteVueArtifact', 'frontNpmInstall']) {
+	workingDir = file("${project.projectDir}/src/frontend")
+	args = ['run', 'build']
+}
+
+processResources.dependsOn 'npmBuild'
 
 group = 'com.ktds'
 version = '0.0.1-SNAPSHOT'
