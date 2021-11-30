@@ -1,5 +1,6 @@
 package com.ktds.questionformentoring.service.impl;
 
+import com.ktds.questionformentoring.common.util.CommonUtil;
 import com.ktds.questionformentoring.service.ChartService;
 import com.ktds.questionformentoring.vo.chart.BarChartDataVo;
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ public class ChartServiceImpl implements ChartService {
         for(int i=0; i<10; i++) {
             BarChartDataVo vo = BarChartDataVo.builder()
                     .quarter(String.format("0%s", i))
-                    .sales(String.valueOf(50)).build();
+                    .sales(String.valueOf(CommonUtil.getRandomInt(10, 50))).build();
 
             barChartDataList.add(vo);
         }
