@@ -1,4 +1,4 @@
-package com.ktds.questionformentoring.vo.chart;
+package com.ktds.questionformentoring.common.vo.chart;
 
 import lombok.Builder;
 import lombok.Data;
