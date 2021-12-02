@@ -1,8 +1,8 @@
-package com.ktds.questionformentoring.service.impl;
+package com.ktds.questionformentoring.common.service.impl;
 
 import com.ktds.questionformentoring.common.util.CommonUtil;
-import com.ktds.questionformentoring.service.ChartService;
-import com.ktds.questionformentoring.vo.chart.BarChartDataVo;
+import com.ktds.questionformentoring.common.service.ChartService;
+import com.ktds.questionformentoring.common.vo.chart.BarChartDataVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
