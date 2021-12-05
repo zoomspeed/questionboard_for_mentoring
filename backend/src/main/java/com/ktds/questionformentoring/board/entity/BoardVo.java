@@ -1,4 +1,6 @@
 package com.ktds.questionformentoring.board.entity;
 
-public class temp {
+public class BoardVo {
+    int id;
+    String title;
 }

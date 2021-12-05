@@ -63,6 +63,12 @@ dependencies {
 	//lombok 라이브러리 추가 끝
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	//mybatis 라이브러리 추가
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+	//postgresql 라이브러리 추가
+	// https://mvnrepository.com/artifact/org.postgresql/postgresql
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
+
 
 }
 
