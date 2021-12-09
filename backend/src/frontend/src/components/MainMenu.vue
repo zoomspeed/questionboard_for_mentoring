@@ -1,9 +1,10 @@
 <template>
-<div>
+  <div>
     <div id="nav">
-        <router-link to="/chart/barchart">BarChart</router-link> |
+      <router-link to="/chart/barchart">BarChart</router-link> |
+      <router-link to="/board">게시판</router-link> |
     </div>
-</div>
+  </div>
 </template>
 
 <style scoped>
