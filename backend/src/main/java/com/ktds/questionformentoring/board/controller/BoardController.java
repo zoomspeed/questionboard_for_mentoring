@@ -12,7 +12,7 @@ public class BoardController {
 
     @Autowired
     private BoardService boardService;
-
+//주석
     @GetMapping("/mybatis-test")
     public String test(){
 
