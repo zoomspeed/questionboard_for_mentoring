@@ -1,5 +1,6 @@
 package com.ktds.questionformentoring.board.service;
 
+import com.ktds.questionformentoring.board.entity.BoardVo;
 import com.ktds.questionformentoring.board.mapper.BoardMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ public class BoardServiceImpl implements  BoardService{
     private BoardMapper boardMapper;
 
     @Override
-    public String testSelect() {
+    public BoardVo testSelect() {
         return boardMapper.testSelect();
     }
 }

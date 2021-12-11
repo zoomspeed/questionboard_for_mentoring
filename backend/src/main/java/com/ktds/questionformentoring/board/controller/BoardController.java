@@ -1,5 +1,6 @@
 package com.ktds.questionformentoring.board.controller;
 
+import com.ktds.questionformentoring.board.entity.BoardVo;
 import com.ktds.questionformentoring.board.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,7 +15,7 @@ public class BoardController {
     private BoardService boardService;
 //주석
     @GetMapping("/mybatis-test")
-    public String test(){
+    public BoardVo test(){
 
         System.out.println(boardService.testSelect());
         return boardService.testSelect();

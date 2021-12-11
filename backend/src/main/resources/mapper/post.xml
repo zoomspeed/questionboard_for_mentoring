@@ -2,6 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ktds.questionformentoring.board.mapper.BoardMapper">
-    <select id="testSelect" resultType="string"> select * from newtable </select>
+    <select id="testSelect" resultType="BoardVo">
+    select * from newtable
+    </select>
 </mapper>
 
