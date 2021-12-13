@@ -12,10 +12,11 @@ public class BoardController {
     @Autowired
     private BoardService boardService;
 
-//    @GetMapping("/board")
-//    public BoardDTO test(){
-//        return ;
-//    }
+    @GetMapping("/board/{pstartNo}")
+    public BoardDTO getBoardInfo(@PathVariable("pstartNo") int pstartNo){
+        BoardDTO result = boardService.findById(pstartNo);
+        return result;
+    }
 //    @PostMapping
 //    @PutMapping
 //    @DeleteMapping
