@@ -1,10 +1,11 @@
 package com.ktds.questionformentoring.board.service;
 
-import com.ktds.questionformentoring.board.entity.BoardVo;
+import com.ktds.questionformentoring.board.entity.BoardDTO;
 import com.ktds.questionformentoring.board.mapper.BoardMapper;
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class BoardServiceImpl implements  BoardService{
@@ -13,7 +14,27 @@ public class BoardServiceImpl implements  BoardService{
     private BoardMapper boardMapper;
 
     @Override
-    public BoardVo testSelect() {
-        return boardMapper.testSelect();
+    public void write(BoardDTO boardDTO){
+       boardMapper.write(boardDTO);
+    }
+
+    @Override
+    public List<BoardDTO> findAll() {
+        return boardMapper.findAll();
+    }
+
+    @Override
+    public BoardDTO findById(int pstartNo) {
+        return boardMapper.findById(pstartNo);
+    }
+
+    @Override
+    public BoardDTO update(BoardDTO boardDTO) {
+        return boardMapper.update(boardDTO);
+    }
+
+    @Override
+    public void delete(int pstartNo) {
+        boardMapper.delete(pstartNo);
     }
 }
