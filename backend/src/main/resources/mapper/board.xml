@@ -11,5 +11,25 @@
         values (default , #{rgtrId}, #{rgtrNm}, #{rgtrMbrCd}, pg_catalog.clock_timestamp(),
                 #{pstartTitlNm}, #{pstartCn}, #{inqCnt}, #{cmntCnt}, #{slctnYn}, #{mbrNo})
     </insert>
+    <select id="findAll" resultType="com.ktds.questionformentoring.board.entity.BoardDTO">
+        select "PSTART_NO", "RGTR_ID", "RGTR_NM", "RGTR_MBR_CD", "REG_DT", "PSTART_TITL_NM", "PSTART_CN", "INQ_CNT", "SLCTN_YN", "MBR_NO"
+        from "BOARD"
+    </select>
+    <select id="findById" parameterType="int" resultType="com.ktds.questionformentoring.board.entity.BoardDTO">
+        select "PSTART_NO", "RGTR_ID", "RGTR_NM", "RGTR_MBR_CD", "REG_DT", "PSTART_TITL_NM", "PSTART_CN", "INQ_CNT", "SLCTN_YN", "MBR_NO"
+        from "BOARD"
+        where "PSTART_NO" = #{pstartNo}
+    </select>
+    <update id="update" parameterType="com.ktds.questionformentoring.board.entity.BoardDTO">
+        update "BOARD"
+        set
+            "PSTART_TITL_NM" = #{pstartTitlNm},
+            "PSTART_CN" = #{pstartCn}
+        where "PSTART_NO" = #{pstartNo}
+    </update>
+    <delete id="delete" parameterType="int">
+        delete from "BOARD"
+        where "PSTART_NO" = #{pstartNo}
+    </delete>
 </mapper>
 
