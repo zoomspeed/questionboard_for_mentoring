@@ -14,7 +14,7 @@ public interface BoardMapper {
     /* 글 단건 조회 */
     public BoardDTO findById(int pstartNo);
     /* 글 수정 */
-    public BoardDTO update(BoardDTO boardDTO);
+    public void update(BoardDTO boardDTO);
     /* 글 삭제 */
     public void delete(int pstartNo);
 }
