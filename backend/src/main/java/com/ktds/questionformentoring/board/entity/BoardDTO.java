@@ -3,10 +3,12 @@ package com.ktds.questionformentoring.board.entity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 
 @Getter
 @Setter
+@ToString
 public class BoardDTO {
     //    private int testId;
     //    private String testTitle;
