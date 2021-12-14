@@ -1,4 +1,4 @@
-package com.ktds.questionformentoring.admin.service;
+package com.ktds.questionformentoring.admin.boardManagement.service;
 
 import org.springframework.stereotype.Service;
 
