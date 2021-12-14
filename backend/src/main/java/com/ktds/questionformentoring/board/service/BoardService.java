@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface BoardService {
     /* 글작성 */
-    public void write(BoardDTO boardVo);
+    public BoardDTO write(BoardDTO boardVo);
     /* 글 목록 조회 */
     public List<BoardDTO> findAll();
     /* 글 단건 조회 */
