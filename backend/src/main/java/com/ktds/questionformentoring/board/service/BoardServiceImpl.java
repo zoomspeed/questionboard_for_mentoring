@@ -14,8 +14,9 @@ public class BoardServiceImpl implements  BoardService{
     private BoardMapper boardMapper;
 
     @Override
-    public void write(BoardDTO boardDTO){
-       boardMapper.write(boardDTO);
+    public BoardDTO write(BoardDTO boardDTO){
+
+       return boardMapper.write(boardDTO);
     }
 
     @Override
