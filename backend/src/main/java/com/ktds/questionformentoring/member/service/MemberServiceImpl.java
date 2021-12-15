@@ -1,5 +1,6 @@
 package com.ktds.questionformentoring.member.service;
 
+import com.ktds.questionformentoring.member.entity.MemberDTO;
 import com.ktds.questionformentoring.member.entity.MemberManagementDTO;
 import com.ktds.questionformentoring.member.mapper.MemberMapper;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +13,11 @@ import java.util.List;
 public class MemberServiceImpl implements MemberService {
 
     private final MemberMapper memberMapper;
+
+    @Override
+    public MemberDTO save(MemberDTO memberDTO) {
+        return memberMapper.save(memberDTO);
+    }
 
     @Override
     public List<MemberManagementDTO> searchMemberList() {

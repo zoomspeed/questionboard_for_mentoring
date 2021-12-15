@@ -3,6 +3,14 @@
 
 <mapper namespace="com.ktds.questionformentoring.member.mapper.MemberMapper">
 
+    <select id="save" resultType="MemberDTO">
+        insert into "MBR_BAS"
+        ("MBR_NO", "MBR_NM", "LOGIN_ID", "LOGIN_PWD", "MBR_TYPE_CD", "MTR_ID", "TELNO", "MBR_SBSC_DT",
+         "RTRMMB_DT","RTRMMB_WHY_CD", "LAST_LOGIN_DT", "PWD_CHG_DATE", "INFO_AMD_DATE")
+        values (default, #{mbrNm}, #{loginId}, #{loginPwd}, #{mbrTypeCd}, #{mtrId}, #{telno}, #{mbrSbscDt},
+                #{rtrmmbDt}, #{rtrmmbWhyCd}, #{lastLoginDt}, #{pwdChgDate}, #{infoAmdDt}) returning *
+    </select>
+
     <select id="findAll" resultType="MemberManagementDTO">
         select "MBR_NO", "MBR_NM", "LOGIN_ID", "MBR_TYPE_CD", "TELNO", "MTR_ID", "MBR_SBSC_DT", "LAST_LOGIN_DT"
         from "MBR_BAS"

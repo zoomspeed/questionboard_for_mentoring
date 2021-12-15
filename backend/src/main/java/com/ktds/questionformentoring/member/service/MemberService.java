@@ -1,10 +1,14 @@
 package com.ktds.questionformentoring.member.service;
 
+import com.ktds.questionformentoring.member.entity.MemberDTO;
 import com.ktds.questionformentoring.member.entity.MemberManagementDTO;
 
 import java.util.List;
 
 public interface MemberService {
+
+    // 유저 저장
+    public MemberDTO save(MemberDTO memberDTO);
 
     // 관리자 페이지 - 유저리스트 조회
     public List<MemberManagementDTO> searchMemberList();

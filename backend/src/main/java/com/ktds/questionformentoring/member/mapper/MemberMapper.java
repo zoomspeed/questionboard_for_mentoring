@@ -1,5 +1,6 @@
 package com.ktds.questionformentoring.member.mapper;
 
+import com.ktds.questionformentoring.member.entity.MemberDTO;
 import com.ktds.questionformentoring.member.entity.MemberManagementDTO;
 
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 public interface MemberMapper {
 
     // 유저 저장
+    public MemberDTO save(MemberDTO memberDTO);
 
     // 관리자 페이지 - 유저리스트 조회
     public List<MemberManagementDTO> findAll();
