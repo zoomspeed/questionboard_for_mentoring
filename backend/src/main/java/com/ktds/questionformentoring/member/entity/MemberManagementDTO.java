@@ -9,6 +9,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString
 public class MemberManagementDTO {
 
     private Long mbrNo;         // 회원번호
