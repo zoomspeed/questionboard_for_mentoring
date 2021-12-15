@@ -11,17 +11,17 @@ import java.util.Date;
 @Builder
 public class Member {
 
-    private Long memberNumber;          // 회원번호
-    private String memberName;          // 회원명
-    private String loginId;             // 로그인 아이디
-    private String loginPassword;       // 로그인 비밀번호
-    private String memberTypeCode;      // 회원유형코드
-    private String mentorId;            // 멘토아이디
-    private String email;               // 이메일
-    private Date memberSubscribeDate;   // 회원가입일시
-    private Date retiredDate;           // 탈퇴일시
-    private String retiredWhyCode;      // 탈퇴사유코드
-    private Date lastLoginDate;         // 최종 로그인 일시
-    private Date passwordChangeDate;    // 비밀번호 변경일자
-    private Date infoModifyDate;        // 정보 수정일자
+    private Long mbrNo;         // 회원번호
+    private String mbtNm;       // 회원명
+    private String loginId;     // 로그인 아이디
+    private String loginPwd;    // 로그인 비밀번호
+    private String mbtTypeCd;   // 회원유형코드
+    private String mtrId;       // 멘토아이디
+    private String telno;       // 전화번호
+    private Date mbrSbscDt;     // 회원가입일시
+    private Date rtrmmbDta;     // 탈퇴일시
+    private String rtrmmbWhyCd; // 탈퇴사유코드
+    private Date lastLoginDt;   // 최종 로그인 일시
+    private Date pwdChgDate;    // 비밀번호 변경일자
+    private Date infoAmdDt;     // 정보 수정일자
 }
