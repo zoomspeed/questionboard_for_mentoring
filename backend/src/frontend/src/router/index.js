@@ -22,6 +22,11 @@ const routes = [
     component: () => import("@/views/board/BoardView"),
     //beforeEnter: checkAuth(),
   },
+  {
+    path: "/testBoard",
+    name: "testBoard",
+    component: () => import("@/views/board/BoardViewCopy"),
+  },
 ];
 
 const router = new VueRouter({
