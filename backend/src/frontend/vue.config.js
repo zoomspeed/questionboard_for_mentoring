@@ -3,9 +3,8 @@ module.exports = {
   outputDir: "../main/resources/static",
   indexPath: "../static/index.html",
   devServer: {
-    port: 8081,
     proxy: "http://localhost:8080",
-    disableHostCheck : true
+    disableHostCheck: true,
   },
   chainWebpack: (config) => {
     const svgRule = config.module.rule("svg");

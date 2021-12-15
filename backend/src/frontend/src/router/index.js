@@ -23,9 +23,9 @@ const routes = [
     //beforeEnter: checkAuth(),
   },
   {
-    path: "/testBoard",
-    name: "testBoard",
-    component: () => import("@/views/board/BoardViewCopy"),
+    path: "/board/:pstartNo",
+    name: "BoardDetail",
+    component: () => import("@/views/board/BoardDetail"),
   },
 ];
 
