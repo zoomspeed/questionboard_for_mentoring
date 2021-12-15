@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: "/board",
-    name: "Board",
+    name: "BoardView",
     component: () => import("@/views/board/BoardView"),
     //beforeEnter: checkAuth(),
   },
@@ -26,6 +26,16 @@ const routes = [
     path: "/board/:pstartNo",
     name: "BoardDetail",
     component: () => import("@/views/board/BoardDetail"),
+  },
+  {
+    path: "/board/write",
+    name: "BoardWrite",
+    component: () => import("@/views/board/BoardWrite"),
+  },
+  {
+    path: "/board/modify",
+    name: "BoardModify",
+    component: () => import("@/views/board/BoardModify"),
   },
 ];
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <b-button @click="goBoardWrite"></b-button>
     <b-table striped hover :items="items" @row-clicked="goDetail"></b-table>
   </div>
 </template>
@@ -14,6 +15,9 @@ export default {
       console.log(record.pstartNo);
       this.pstartNo = record.pstartNo;
       this.$router.push({ name: "BoardDetail", params: { pstartNo: this.pstartNo } });
+    },
+    goBoardWrite() {
+      this.$router.push({ name: "BoardWrite" });
     },
   },
   created() {
